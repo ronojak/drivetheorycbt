@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp">
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Upgrade to Premium" android:textSize="20sp"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="KES 150 / month"/>
+    <Button android:id="@+id/btn_monthly" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Choose Monthly"/>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="KES 500 / year"/>
+    <Button android:id="@+id/btn_annual" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Choose Annual"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"/>
+
+    <Button
+        android:id="@+id/btn_mpesa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pay with M-PESA"
+        android:backgroundTint="@color/mpesa_green"
+        android:textColor="@android:color/white"/>
+</LinearLayout>

@@ -1,0 +1,27 @@
+[
+  {
+    "id": "q1",
+    "text": "What does a red traffic light mean?",
+    "options": ["Stop", "Go", "Proceed with caution", "Speed up"],
+    "correctIndex": 0,
+    "category": "Rules of the road",
+    "difficulty": 1
+  },
+  {
+    "id": "q2",
+    "text": "When should you use your seat belt?",
+    "options": ["Only on highways", "Only at night", "At all times", "Only in front seats"],
+    "correctIndex": 2,
+    "category": "Safety",
+    "difficulty": 1
+  },
+  {
+    "id": "q3",
+    "text": "What is the typical speed limit in urban areas unless otherwise posted?",
+    "options": ["30 km/h", "50 km/h", "70 km/h", "90 km/h"],
+    "correctIndex": 1,
+    "category": "Speed limits",
+    "difficulty": 1
+  }
+]
+

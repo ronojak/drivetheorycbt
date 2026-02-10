@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:installLocation="auto">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name=".DriveTheoryApp"
+        android:allowBackup="true"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true" android:theme="@style/AppTheme">
+        <activity android:name=".presentation.auth.LauncherActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".presentation.auth.LoginActivity" />
+        <activity android:name=".presentation.auth.RegisterActivity" />
+        <activity android:name=".presentation.auth.ForgotPasswordActivity" />
+        <activity android:name=".presentation.account.ProfileActivity" />
+        <activity android:name=".presentation.billing.SubscriptionActivity" />
+        <activity android:name=".presentation.billing.PaystackCallbackActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="ntsa" android:host="paystack" android:path="/callback" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".presentation.account.SettingsActivity" />
+        <activity android:name=".presentation.MainActivity" android:exported="false" />
+        <activity android:name=".presentation.mpesa.MpesaPaymentActivity" />
+        <activity android:name=".presentation.mpesa.ReceiptDetailsActivity" />
+    </application>
+
+</manifest>

@@ -1,0 +1,55 @@
+### Initiate STK Push
+POST http://localhost:5001/<FIREBASE_PROJECT_ID>/us-central1/api/api/payments/mpesa/stk-push
+Content-Type: application/json
+
+{
+  "uid": "test-user-123",
+  "phoneNumber": "0712345678",
+  "planId": "monthly",
+  "amount": 300
+}
+
+### Status by paymentId
+GET http://localhost:5001/<FIREBASE_PROJECT_ID>/us-central1/api/api/payments/status?paymentId={{paymentId}}
+
+### Callback (simulate from Daraja)
+POST http://localhost:5001/<FIREBASE_PROJECT_ID>/us-central1/api/api/payments/mpesa/callback
+Content-Type: application/json
+
+{
+  "Body": {
+    "stkCallback": {
+      "MerchantRequestID": "29115-34620561-1",
+      "CheckoutRequestID": "ws_CO_0101202400000000",
+      "ResultCode": 0,
+      "ResultDesc": "The service request is processed successfully.",
+      "CallbackMetadata": {
+        "Item": [
+          { "Name": "Amount", "Value": 300 },
+          { "Name": "MpesaReceiptNumber", "Value": "NLJ7RT61SV" },
+          { "Name": "PhoneNumber", "Value": 254712345678 }
+        ]
+      }
+    }
+  }
+}
+
+### Reconcile PENDING
+POST http://localhost:5001/<FIREBASE_PROJECT_ID>/us-central1/api/api/payments/mpesa/reconcile
+Content-Type: application/json
+
+{
+  "limit": 10
+}
+
+### Manual Receipt Fallback
+POST http://localhost:5001/<FIREBASE_PROJECT_ID>/us-central1/api/api/payments/mpesa/manual-receipt
+Content-Type: application/json
+
+{
+  "uid": "test-user-123",
+  "receipt": "NLJ7RT61SV",
+  "planId": "monthly",
+  "phoneNumber": "0712345678",
+  "amount": 300
+}

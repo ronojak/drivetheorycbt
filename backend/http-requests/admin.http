@@ -1,0 +1,11 @@
+### Admin: list payments (requires Bearer token of admin)
+GET http://localhost:5001/<FIREBASE_PROJECT_ID>/us-central1/api/api/admin/payments?status=PENDING&limit=20
+Authorization: Bearer <FIREBASE_ID_TOKEN>
+
+### Admin: get by paymentId
+GET http://localhost:5001/<FIREBASE_PROJECT_ID>/us-central1/api/api/admin/payments?paymentId=<PAYMENT_ID>
+Authorization: Bearer <FIREBASE_ID_TOKEN>
+
+### Admin: export CSV of payments
+GET http://localhost:5001/<FIREBASE_PROJECT_ID>/us-central1/api/api/admin/payments/export?status=PAID&limit=100
+Authorization: Bearer <FIREBASE_ID_TOKEN>

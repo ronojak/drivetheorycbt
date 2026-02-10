@@ -1,0 +1,16 @@
+build:
+  maxIssues: 0
+
+style:
+  MagicNumber:
+    active: false
+  WildcardImport:
+    active: true
+  MaxLineLength:
+    active: true
+    maxLineLength: 120
+
+comments:
+  UndocumentedPublicFunction:
+    active: false
+

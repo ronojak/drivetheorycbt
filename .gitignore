@@ -1,0 +1,50 @@
+# Gradle
+.gradle/
+**/build/
+
+# Local configuration
+local.properties
+keystore.properties
+*.keystore
+*.jks
+
+# IDE/Editor
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and reports
+*.log
+reports/
+test-results/
+
+# Android/Build outputs
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.ap_
+*.aab
+*.hprof
+out/
+bin/
+gen/
+
+# Crashlytics/Firebase (avoid committing secrets)
+fabric.properties
+**/google-services.json
+
+# Temporary files
+*.tmp
+.tmp/
+*.orig
+*.rej
+
+# Do not ignore Gradle Wrapper
+# (keep gradlew, gradlew.bat and gradle/wrapper/gradle-wrapper.jar tracked)

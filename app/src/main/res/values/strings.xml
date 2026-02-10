@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NTSA Practice\nExams</string>
+    <string name="choose_monthly_label">Choose Monthly%s</string>
+    <string name="choose_annual_label">Choose Annual%s</string>
+</resources>

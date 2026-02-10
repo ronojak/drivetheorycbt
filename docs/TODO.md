@@ -1,0 +1,24 @@
+# TODO: DriveTheory CBT MVP to Release
+
+- [x] Move architecture doc to `docs/`
+- [x] Initialize Gradle project and app module
+- [x] Enable Jetpack Compose and navigation
+- [x] Add seed loader for questions from assets
+- [x] Implement minimal exam engine + timer
+- [x] Add Room DB for attempt history
+- [x] Compose UI: Home, Exam, Results, History
+- [x] Wire ViewModels and simple service locator
+- [x] Add sample seed JSON
+- [x] Add unit tests for engine scoring
+- [x] Add app icons and branding assets
+- [x] Add README with usage, build, and release steps
+- [ ] Expand tests (ViewModel, repository, UI)
+- [x] Configure ktlint/detekt
+- [x] Add CI workflow for build + tests
+- [x] Add Play Store listing placeholders
+- [x] Add Privacy Policy
+- [x] Enable R8 + add ProGuard rules
+- [x] Add Robolectric ViewModel test
+- [x] Publish docs via GitHub Pages workflow
+- [ ] Release signing config via `gradle.properties` (keystore not committed)
+- [ ] Play Store listing assets and privacy policy doc
