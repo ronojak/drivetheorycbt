@@ -45,7 +45,7 @@ class ProfileViewModel @Inject constructor(
     fun save(name: String?, phone: String?) {
         val user = auth.currentUser() ?: return
         viewModelScope.launch {
-            val res = users.upsertProfile(UserProfile(uid = user.uid, name = name, email = user.email ?: "", phone = phone))
+            val res = users.upsertProfile(UserProfile(uid = user.uid, name = name, email = user.email, phone = phone))
             _state.value = _state.value.copy(toast = if (res is Result.Success) "Saved" else "Save failed")
         }
     }

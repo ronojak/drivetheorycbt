@@ -13,6 +13,14 @@ Offline-first Android app for randomized driving theory exams. Built with Kotlin
 - Run tests: `./gradlew testDebugUnitTest`
 - Install debug: `./gradlew installDebug`
 
+## Android SDK Setup
+- Ensure the Android SDK is installed (Android Studio > Settings/Preferences > Appearance & Behavior > System Settings > Android SDK).
+- Provide the SDK path via one of:
+  - Set env var `ANDROID_SDK_ROOT` (or `ANDROID_HOME`), or
+  - Create `local.properties` with `sdk.dir=/absolute/path/to/Android/Sdk`.
+- You can auto-generate `local.properties` by running: `bash scripts/setup-local-properties.sh`.
+- See examples in `local.properties.example`.
+
 ## Project Layout
 - `app/src/main/java/com/drivetheory/cbt/` — source
   - `engine/` exam logic, `data/` repositories/Room, `domain/` models, `presentation/` Compose UI

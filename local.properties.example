@@ -1,0 +1,20 @@
+## DO NOT COMMIT THIS FILE
+# Copy this file to `local.properties` and set `sdk.dir` to your
+# local Android SDK path so Gradle can build the project.
+#
+# If you have the `ANDROID_SDK_ROOT` or `ANDROID_HOME` env var set,
+# you can skip creating `local.properties` — Android Gradle Plugin
+# will use those automatically.
+#
+# Examples:
+#
+# macOS:
+# sdk.dir=/Users/your-username/Library/Android/sdk
+#
+# Linux:
+# sdk.dir=/home/your-username/Android/Sdk
+#
+# Windows (use forward slashes):
+# sdk.dir=C:/Users/your-username/AppData/Local/Android/Sdk
+
+# sdk.dir=/abs/path/to/Android/Sdk

@@ -92,8 +92,7 @@ fun ExamScreen(
 
     LaunchedEffect(state.finished) {
         if (state.finished) {
-            val (score, total) = state.score to state.total
-            onFinish(state.score, total)
+            onFinish(state.score, state.total)
         }
     }
 

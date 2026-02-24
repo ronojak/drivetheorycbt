@@ -13,7 +13,6 @@ class QuestionSeedLoader(private val context: Context) {
     }
 
     fun loadAllFromAssets(dir: String = "seed"): List<Question> {
-        val assets = context.assets
         val map = LinkedHashMap<String, Question>()
         // List files recursively under dir; do not abort on individual file errors
         val files = runCatching { listAssetFiles(dir) }.getOrElse { emptyList() }
@@ -196,17 +195,17 @@ class QuestionSeedLoader(private val context: Context) {
         data class Opt(val order: Int, val value: String)
         val opts = mutableListOf<Opt>()
         val numPatterns = listOf("option", "answer", "ans", "choice", "opt")
-        header.forEach { h ->
+        header.forEach headerLoop@{ h ->
             val v = byName[h]?.trim().orEmpty()
-            if (v.isEmpty()) return@forEach
+            if (v.isEmpty()) return@headerLoop
             var matched = false
             // Numbered headers e.g., option1, answer2, ans3, choice4, opt5
-            numPatterns.forEach { prefix ->
+            numPatterns.forEach numLoop@{ prefix ->
                 val m = Regex("^${prefix}(\\d+)").find(h)
                 if (m != null) {
                     opts.add(Opt(m.groupValues[1].toInt(), v))
                     matched = true
-                    return@forEach
+                    return@numLoop
                 }
             }
             if (!matched) {
